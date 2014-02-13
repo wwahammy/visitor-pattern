@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E94C6E66-4508-4292-9439-5C48AFDC6C17}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VisitorPattern.Automation</RootNamespace>
+    <AssemblyName>VisitorPattern.Automation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <GeneratePkgDefFile>false</GeneratePkgDefFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NuPattern.Library">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Library.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Common">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Presentation">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Presentation.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.Runtime.Extensibility">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.Runtime.Extensibility.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="NuPattern.VisualStudio">
+      <HintPath>$(PatternToolkitRuntime)\NuPattern.VisualStudio.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime">
+      <HintPath>$(PatternToolkitRuntime)\Microsoft.Practices.EnterpriseLibrary.Configuration.DesignTime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Shell.Immutable.10.0" />
+    <Reference Include="Microsoft.VisualStudio.ExtensibilityHosting, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>True</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Modeling.Sdk.12.0" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutomationHelper.cs" />
+    <Compile Include="Commands\LoadProjects.cs">
+      <ItemGuid>db544ace-dcdc-4e7a-824a-4829225f1578</ItemGuid>
+    </Compile>
+    <Compile Include="Commands\LoadProjects.Validation.cs" />
+    <Compile Include="Commands\LoadStart.cs">
+      <ItemGuid>bde00059-536f-45bc-a8f2-9b37a7dc77a7</ItemGuid>
+    </Compile>
+    <Compile Include="Commands\LoadStart.Validation.cs" />
+    <Compile Include="Events\ProjectChanged.cs">
+      <ItemGuid>ea067fc2-bd00-42a1-980d-4096c9ccb805</ItemGuid>
+    </Compile>
+    <Compile Include="FindAllTheFiles.cs" />
+    <Compile Include="GeneratedCode\VisitorPattern\CollectionImplementation.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>2170cb61-02db-4a46-844e-11f3005c20c6</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\CollectionInterface.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>8a5926c3-6fcb-4b7e-8c00-e6469b243701</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ElementImplementation.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>8ac9ca41-1657-4590-8404-aab5269f8f8c</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ElementInterface.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>39ead0a7-dbd0-40f1-aed2-3b7c4d3c1fdf</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ExtensionPointImplementation.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>6b756d38-d3fc-4042-a711-a5f21970542e</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ExtensionPointInterface.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>57e90c0e-0acc-43c6-8da5-83649c2e42eb</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ProductImplementation.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>70697ac0-3e69-45fe-b075-a86209e513a1</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ProductInterface.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>22767b51-712a-4d27-af98-0b692b9e21fc</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ViewImplementation.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>f379a76d-8376-4403-b81d-b62b497b727d</ItemGuid>
+    </Compile>
+    <Compile Include="GeneratedCode\VisitorPattern\ViewInterface.gen.cs">
+      <SourceModelReference>modelbus://NuPattern.Runtime.Store/VisitorPattern/Product/C:\Users\Eric\Documents\GitHub\VisitorPattern\VisitorPattern.slnbldr%252faededaf1-9eab-44f7-8792-8ef8251b5ee0</SourceModelReference>
+      <ItemGuid>383fdaca-9f5c-40c1-9533-df7b7cdc01a5</ItemGuid>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValueProviders\NamespaceFromParent.cs">
+      <ItemGuid>2a70c7d4-51c8-4536-b959-cb55a9612c57</ItemGuid>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4df5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Conditions\" />
+    <Folder Include="TypeConverters\" />
+    <Folder Include="TypeEditors\" />
+    <Folder Include="ValidationRules\" />
+    <Folder Include="ValueComparers\" />
+  </ItemGroup>
+  <!-- Properties for Toolkit Targets -->
+  <PropertyGroup>
+    <CopyVsixDebuggingDependencies>false</CopyVsixDebuggingDependencies>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(localappdata)\Microsoft\MSBuild\NuPattern\NuPattern Toolkit Builder\NuPattern.Authoring.PatternToolkitVersion.targets" />
+  <!-- Properties for VSSDK/DSL Targets -->
+  <PropertyGroup>
+    <StartProgram>$(DevEnvDir)\devenv.exe</StartProgram>
+    <StartAction>Program</StartAction>
+    <StartArguments>/rootsuffix Exp</StartArguments>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+             Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

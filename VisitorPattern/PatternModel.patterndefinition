@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<patternModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/visualstudio/patterning/library/automationextensions" dslVersion="1.3.0.0" Id="38b0397f-b046-45a6-a555-c3008ee9336d" xmlns="http://schemas.microsoft.com/visualstudio/patterning/runtime/patternmodel">
+  <dm0:extensions>
+    <eventSettings Id="15cd301c-3c3a-4a48-9d51-088a5f7132c8" commandId="cb1acc49-dc80-489f-8e6f-b96bde10fdc2" eventId="NuPattern.Library.Events.IOnElementCreatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="d32d5865-f0c8-454e-9aad-97b6395bdc21" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="644d6f28-fa95-41c0-b27d-14f1d153d056" commandId="234d4f57-bc1b-427f-9742-6087a48827fb" eventId="VisitorPattern.Automation.Events.IOnProjectChanged" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="6ca74626-d201-4f86-928d-8cd262ff540f" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="c6eb11bc-f289-473d-a9af-a1a7780cfe70" commandId="14de647c-b9d3-44b6-9b94-fe30d634d69f" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="4c9df881-ed81-4925-b697-11e1e47f1236" />
+      </extendedElement>
+      <conditions>[
+  {
+    "TypeId": "NuPattern.Library.Conditions.ValidElementCondition",
+    "Properties": [
+      {
+        "Name": "ValidateDescendants",
+        "Value": null,
+        "ValueProvider": null
+      }
+    ]
+  }
+]</conditions>
+    </eventSettings>
+    <eventSettings Id="9684a45e-0db9-492b-9d21-05619c92b10c" commandId="234d4f57-bc1b-427f-9742-6087a48827fb" eventId="NuPattern.Library.Events.IOnElementLoadedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="4188c41d-6c24-46e1-b45b-0fd2edbfe72a" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="ce25fa2e-f47c-4393-bfab-e251165a2ebb" commandId="c005f0ec-7d33-41d8-9b58-a70f976c57c3" eventId="NuPattern.Library.Events.IOnElementInstantiatedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="30215c03-03d0-419f-8015-61e56bd6b32d" />
+      </extendedElement>
+    </eventSettings>
+    <eventSettings Id="91e90d31-1b80-4388-9ba7-fa378d6fe2a7" commandId="9bdba958-e025-407b-9677-f9f25bc3647e" eventId="NuPattern.Library.Events.IOnBuildStartedEvent" wizardId="00000000-0000-0000-0000-000000000000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="4bfa8a30-b03d-4272-89b1-64a2cc87a348" />
+      </extendedElement>
+    </eventSettings>
+    <commandSettings Id="cb1acc49-dc80-489f-8e6f-b96bde10fdc2" typeId="VisitorPattern.Automation.Commands.LoadStart">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="76b49be8-6a54-4f6f-9460-7b540e1a042b" />
+      </extendedElement>
+    </commandSettings>
+    <commandSettings Id="234d4f57-bc1b-427f-9742-6087a48827fb" typeId="VisitorPattern.Automation.Commands.LoadProjects">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="8161eae8-ae7d-47ae-9a92-9f794a7a41e7" />
+      </extendedElement>
+    </commandSettings>
+    <commandSettings Id="14de647c-b9d3-44b6-9b94-fe30d634d69f" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="1099e2db-7304-48d1-a9af-15a8589a6d3c" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetFileName",
+    "Value": "IVisitor",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "~",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/7abcea20-93c2-4584-8704-5c5bd2c47659/Assets/Templates/Text/VisitorInterface.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://f1261068-57b8-47e9-a6cd-fad9c2b4f319/d0ef7edb-60fb-47be-b17c-2b081a86fb84",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="c005f0ec-7d33-41d8-9b58-a70f976c57c3" typeId="NuPattern.Library.Commands.GenerateProductCodeCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="28e4940d-2268-40e2-86e4-e75020be1252" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "SanitizeName",
+    "Value": "True",
+    "ValueProvider": null
+  },
+  {
+    "Name": "SyncName",
+    "Value": "False",
+    "ValueProvider": null
+  },
+  {
+    "Name": "Tag",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetBuildAction",
+    "Value": null,
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetCopyToOutput",
+    "Value": "DoNotCopy",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetFileName",
+    "Value": "{InstanceName}",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TargetPath",
+    "Value": "../~",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateUri",
+    "Value": "t4://extension/7abcea20-93c2-4584-8704-5c5bd2c47659/Assets/Templates/Text/CreateNewClassTemplate.t4",
+    "ValueProvider": null
+  },
+  {
+    "Name": "TemplateAuthoringUri",
+    "Value": "solution://f1261068-57b8-47e9-a6cd-fad9c2b4f319/6cd138d3-95a5-4d14-be43-1fde13943a19",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <commandSettings Id="9bdba958-e025-407b-9677-f9f25bc3647e" typeId="NuPattern.Library.Commands.ValidateElementCommand">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="8937aad6-221c-44b3-a2ec-4a968dc807c5" />
+      </extendedElement>
+      <properties>[
+  {
+    "Name": "ValidateDescendants",
+    "Value": "True",
+    "ValueProvider": null
+  }
+]</properties>
+    </commandSettings>
+    <menuSettings Id="46fd6e7e-59ee-4268-b835-98670b1748a7" text="Validate All" commandId="9bdba958-e025-407b-9677-f9f25bc3647e" wizardId="00000000-0000-0000-0000-000000000000" sortOrder="10000">
+      <extendedElement>
+        <automationSettingsSchemaMoniker Id="1b8ebf61-a410-4ed3-8fb5-7c06f668714d" />
+      </extendedElement>
+    </menuSettings>
+    <guidanceExtension Id="4b737ce9-1e97-4184-b8cf-a93fc30d8535">
+      <extendedElement>
+        <patternSchemaMoniker Id="3d77b6de-b8c6-4119-8b37-c942402b36ea" />
+      </extendedElement>
+    </guidanceExtension>
+    <guidanceExtension Id="9eaef2f1-e471-4186-ab13-0a7c860df1dd">
+      <extendedElement>
+        <collectionSchemaMoniker Id="5d5eabd8-a59f-46c8-80f1-ce793927fa56" />
+      </extendedElement>
+    </guidanceExtension>
+    <guidanceExtension Id="aba5a41d-6cc7-4b45-9b2a-bdab335fe653">
+      <extendedElement>
+        <collectionSchemaMoniker Id="c3dc8dd9-04f8-4701-8d40-f57c7f490fe3" />
+      </extendedElement>
+    </guidanceExtension>
+    <guidanceExtension Id="39618d57-47d5-4978-8728-ecbb41c5625a">
+      <extendedElement>
+        <elementSchemaMoniker Id="6b8eaba0-a59c-4483-a4fd-4d771ee4cb3a" />
+      </extendedElement>
+    </guidanceExtension>
+    <artifactExtension Id="5dd07a59-defa-4017-a70c-6d01a4d2e249">
+      <extendedElement>
+        <patternSchemaMoniker Id="3d77b6de-b8c6-4119-8b37-c942402b36ea" />
+      </extendedElement>
+    </artifactExtension>
+    <artifactExtension Id="0fc0e561-b10a-42fd-9a79-1e2f7fa877a3">
+      <extendedElement>
+        <collectionSchemaMoniker Id="5d5eabd8-a59f-46c8-80f1-ce793927fa56" />
+      </extendedElement>
+    </artifactExtension>
+    <artifactExtension Id="708d63fa-5577-46be-abb1-7d63348423af">
+      <extendedElement>
+        <collectionSchemaMoniker Id="c3dc8dd9-04f8-4701-8d40-f57c7f490fe3" />
+      </extendedElement>
+    </artifactExtension>
+    <artifactExtension Id="4cfd4106-5e86-4f7f-abf6-f8c7e523dcc4">
+      <extendedElement>
+        <elementSchemaMoniker Id="6b8eaba0-a59c-4483-a4fd-4d771ee4cb3a" />
+      </extendedElement>
+    </artifactExtension>
+    <validationExtension Id="86a30e02-cb01-40b7-8137-b1e11de7665d" validationOnBuild="true" validationOnMenu="true">
+      <extendedElement>
+        <patternSchemaMoniker Id="3d77b6de-b8c6-4119-8b37-c942402b36ea" />
+      </extendedElement>
+    </validationExtension>
+  </dm0:extensions>
+  <pattern Id="3d77b6de-b8c6-4119-8b37-c942402b36ea" name="VisitorPattern" displayName="Visitor Pattern" description="The Gang of Four Visitor Pattern Toolkit" codeIdentifier="VisitorPattern" isCustomizable="True" currentDiagramId="fdacbc8f-b306-4ccd-a3b6-95c30bb1e021" patternLink="patternmanager://590395b9-58cf-431e-951c-3871840ac4a4">
+    <customizationPolicy name="CustomizationPolicySchema1">
+      <settings>
+        <setting propertyId="DisplayName" />
+        <setting propertyId="Description" />
+        <setting propertyId="ValidationRules" />
+        <setting propertyId="Icon" />
+      </settings>
+    </customizationPolicy>
+    <automationSettings>
+      <automationSettings Id="d32d5865-f0c8-454e-9aad-97b6395bdc21" name="OnInitialize" displayName="On Initialize" description="The launch when the VisitorPattern is initialized" codeIdentifier="OnInitialize" automationType="Event Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="76b49be8-6a54-4f6f-9460-7b540e1a042b" name="LoadStart" displayName="Load Start" description="Creates the Projects element if it doesn't exiust" codeIdentifier="LoadStart" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="8937aad6-221c-44b3-a2ec-4a968dc807c5" name="ExecuteValidationCommand" displayName="Execute Validation Command" description="" isSystem="true" codeIdentifier="ExecuteValidationCommand" isCustomizable="False" automationType="Command">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="4bfa8a30-b03d-4272-89b1-64a2cc87a348" name="OnBuildValidationEvent" displayName="On Build Validation Event" description="" isSystem="true" codeIdentifier="OnBuildValidationEvent" isCustomizable="False" automationType="Event Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+      <automationSettings Id="1b8ebf61-a410-4ed3-8fb5-7c06f668714d" name="OnMenuValidationContextMenu" displayName="On Menu Validation Context Menu" description="" isSystem="true" codeIdentifier="OnMenuValidationContextMenu" isCustomizable="False" automationType="ContextMenu Launch Point" classification="LaunchPoint">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="Settings" />
+          </settings>
+        </customizationPolicy>
+      </automationSettings>
+    </automationSettings>
+    <views>
+      <view Id="34ca84a2-555b-44e0-98ca-2ae81f7472dc" name="DefaultView" displayName="Default View" description="Description for VisitorPattern.DefaultView" codeIdentifier="DefaultView" isDefault="true" diagramId="fdacbc8f-b306-4ccd-a3b6-95c30bb1e021">
+        <customizationPolicy name="CustomizationPolicySchema1">
+          <settings>
+            <setting propertyId="DisplayName" />
+            <setting propertyId="Description" />
+            <setting propertyId="IsVisible" />
+            <setting propertyId="IsDefault" />
+          </settings>
+        </customizationPolicy>
+        <elements autoCreate="false" allowAddNew="false">
+          <collection Id="5d5eabd8-a59f-46c8-80f1-ce793927fa56" name="Projects" displayName="Projects" description="List of Projects" codeIdentifier="Projects">
+            <customizationPolicy name="CustomizationPolicySchema1">
+              <settings>
+                <setting propertyId="DisplayName" />
+                <setting propertyId="Description" />
+                <setting propertyId="ValidationRules" />
+                <setting propertyId="Icon" />
+                <setting propertyId="IsVisible" />
+              </settings>
+            </customizationPolicy>
+            <automationSettings>
+              <automationSettings Id="8161eae8-ae7d-47ae-9a92-9f794a7a41e7" name="LoadProjects" displayName="Load Projects" description="" codeIdentifier="LoadProjects" automationType="Command">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+              <automationSettings Id="6ca74626-d201-4f86-928d-8cd262ff540f" name="OnProjectsChanged" displayName="On Projects Changed" description="" codeIdentifier="OnProjectsChanged" automationType="Event Launch Point" classification="LaunchPoint">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+              <automationSettings Id="4188c41d-6c24-46e1-b45b-0fd2edbfe72a" name="OnInstantiate" displayName="On Instantiate" description="" codeIdentifier="OnInstantiate" automationType="Event Launch Point" classification="LaunchPoint">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="Settings" />
+                  </settings>
+                </customizationPolicy>
+              </automationSettings>
+            </automationSettings>
+            <childElement cardinality="ZeroToMany" autoCreate="false" allowAddNew="false">
+              <collection Id="c3dc8dd9-04f8-4701-8d40-f57c7f490fe3" name="Project" displayName="Project" description="A Project in Your Solution" codeIdentifier="MyProject">
+                <customizationPolicy name="CustomizationPolicySchema1">
+                  <settings>
+                    <setting propertyId="DisplayName" />
+                    <setting propertyId="Description" />
+                    <setting propertyId="ValidationRules" />
+                    <setting propertyId="Icon" />
+                    <setting propertyId="IsVisible" />
+                  </settings>
+                </customizationPolicy>
+                <properties>
+                  <property Id="09146f45-fd0c-44ec-b5a2-df2a8bfd621a" name="Namespace" displayName="Namespace" description="Project Base Namespace" codeIdentifier="Namespace">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="RawDefaultValue" />
+                        <setting propertyId="IsVisible" />
+                        <setting propertyId="IsReadOnly" />
+                        <setting propertyId="Category" />
+                        <setting propertyId="TypeConverterTypeName" />
+                        <setting propertyId="EditorTypeName" />
+                        <setting propertyId="RawValidationRules" />
+                        <setting propertyId="RawValueProvider" />
+                      </settings>
+                    </customizationPolicy>
+                    <validationRules>[
+  {
+    "TypeId": "NuPattern.Library.ValidationRules.PropertyRequiredValidationRule",
+    "Properties": [
+      {
+        "Name": "ErrorMessage",
+        "Value": null,
+        "ValueProvider": null
+      }
+    ]
+  }
+]</validationRules>
+                    <valueProvider>{
+  "TypeId": "NuPattern.Library.ValueProviders.RootNamespaceValueProvider",
+  "Properties": [
+    {
+      "Name": "ProjectPath",
+      "Value": null,
+      "ValueProvider": null
+    }
+  ]
+}</valueProvider>
+                  </property>
+                </properties>
+                <automationSettings>
+                  <automationSettings Id="1099e2db-7304-48d1-a9af-15a8589a6d3c" name="GenerateVisitor" displayName="Generate Visitor" description="" codeIdentifier="GenerateVisitor" automationType="Command">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="Settings" />
+                      </settings>
+                    </customizationPolicy>
+                  </automationSettings>
+                  <automationSettings Id="4c9df881-ed81-4925-b697-11e1e47f1236" name="GenerateVisitorOnBuild" displayName="Generate Visitor On Build" description="" codeIdentifier="GenerateVisitorOnBuild" automationType="Event Launch Point" classification="LaunchPoint">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="Settings" />
+                      </settings>
+                    </customizationPolicy>
+                  </automationSettings>
+                </automationSettings>
+                <childElement cardinality="ZeroToMany" autoCreate="false">
+                  <element Id="6b8eaba0-a59c-4483-a4fd-4d771ee4cb3a" name="Class" displayName="Class" description="A class in a project" codeIdentifier="Class">
+                    <customizationPolicy name="CustomizationPolicySchema1">
+                      <settings>
+                        <setting propertyId="DisplayName" />
+                        <setting propertyId="Description" />
+                        <setting propertyId="ValidationRules" />
+                        <setting propertyId="Icon" />
+                        <setting propertyId="IsVisible" />
+                      </settings>
+                    </customizationPolicy>
+                    <properties>
+                      <property Id="723dadd0-0c0f-4c2e-95e4-b32670674e26" name="Namespace" displayName="Namespace" description="Class namespace" codeIdentifier="Namespace">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="RawDefaultValue" />
+                            <setting propertyId="IsVisible" />
+                            <setting propertyId="IsReadOnly" />
+                            <setting propertyId="Category" />
+                            <setting propertyId="TypeConverterTypeName" />
+                            <setting propertyId="EditorTypeName" />
+                            <setting propertyId="RawValidationRules" />
+                            <setting propertyId="RawValueProvider" />
+                          </settings>
+                        </customizationPolicy>
+                        <valueProvider>{
+  "TypeId": "VisitorPattern.Automation.ValueProviders.NamespaceFromParent",
+  "Properties": []
+}</valueProvider>
+                      </property>
+                    </properties>
+                    <automationSettings>
+                      <automationSettings Id="28e4940d-2268-40e2-86e4-e75020be1252" name="GenerateClass" displayName="Generate Class" description="" codeIdentifier="GenerateClass" automationType="Command">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
+                      <automationSettings Id="30215c03-03d0-419f-8015-61e56bd6b32d" name="GenerateClassOnInstantiation" displayName="Generate Class On Instantiation" description="" codeIdentifier="GenerateClassOnInstantiation" automationType="Event Launch Point" classification="LaunchPoint">
+                        <customizationPolicy name="CustomizationPolicySchema1">
+                          <settings>
+                            <setting propertyId="DisplayName" />
+                            <setting propertyId="Description" />
+                            <setting propertyId="Settings" />
+                          </settings>
+                        </customizationPolicy>
+                      </automationSettings>
+                    </automationSettings>
+                  </element>
+                </childElement>
+              </collection>
+            </childElement>
+          </collection>
+        </elements>
+      </view>
+    </views>
+  </pattern>
+</patternModel>

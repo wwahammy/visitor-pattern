@@ -1,0 +1,35 @@
+﻿<#@ Template Inherits="NuPattern.Library.ModelElementTextTransformation" HostSpecific="True" Debug="False" #>
+<#@ ModelElement Type="NuPattern.Runtime.IProductElement" Processor="ModelElementProcessor" #>
+<#@ Assembly Name="NuPattern.Common.dll" #>
+<#@ Assembly Name="NuPattern.Runtime.Extensibility.dll" #>
+<#@ Import Namespace="NuPattern.Runtime" #>
+<#@ Import Namespace="NuPattern.Runtime.ToolkitInterface" #>
+<#@ Assembly Name="VisitorPattern.Automation.dll" #>
+<#@ Import Namespace="VisitorPattern" #>
+<#@ Import Namespace="System.Linq" #>
+<#@ Output extension=".cs" #>
+<#
+
+    //This templates creates a new element type for the visitor pattern
+    
+    var currentElement = (IProductElement)this.Element;
+    var myClass = currentElement.As<IClass>();
+
+
+#>
+
+namespace <#= myClass.Namespace #>
+{
+    public class <#= myClass.InstanceName #> {
+
+        public T Accept<T>(IVisitor<T> visitor)
+        {
+            return visitor.Visit(this);
+        }
+
+    }
+}
+
+
+
+
